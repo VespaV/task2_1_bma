@@ -1,0 +1,13 @@
+services:
+  task2:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - BED_FILE_PATH=''
+      - GENOME_FA=''
+      - INDEXED_GENOME=''
+      - TARGET_FASTA=target_sequences.fasta
+      - OUTPUT_SAM=output_alignment.sam
+      - FINAL_OUTPUT=results_with_coordinates.tsv
+    command: ["bash"]
